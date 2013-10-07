@@ -1,10 +1,11 @@
+@import url('icons.css');
+
 html {
   background: url('../images/brickwall.png') #ececec;
 }
 
 body {
   /* background: rgba(255,255,255,.3); */
-  max-width: 1415px;
   /* border: 5px solid rgba(0,0,0,0.5); */
   /* border-top: 0; border-bottom: 0; */
   margin: 0 auto;
@@ -19,13 +20,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-  font-size: 200%;
+  font-size: 250%;
 }
 h3 {
-  font-size: 165%;
+  font-size: 200%;
 }
 h4 {
-  font-size: 145%;
+  font-size: 175%;
 }
 
 
@@ -36,48 +37,79 @@ h4 {
   position: relative;
 }
 
-.home > header nav {
-  background: url('../images/darker-wood.png');
-  padding-left: 2%;
+body > header nav {
+  background: url('../images/dark-brick.png');
   overflow: hidden;
   border-bottom: 2px solid #444;
+  width: 100%;
 }
-.home > header nav ul {
+body > header nav .menus {
+  max-width: 1415px;
+  margin: 0 auto;
+}
+body > header nav ul {
   margin: 0; padding: 0;
 }
-.home > header nav li {
+body > header nav li {
   list-style: none;
   display: inline-block;
   padding: 0; margin: 0;
+  margin-left: -4px;
   color: white;
 }
-.home > header nav li a {
+body > header nav li a {
   padding: 10px 25px;
-  display: block;
+  display: inline-block;
   color: white;
   text-decoration: none;
   font-weight: 600;
-  font-size: 95%;
+  font-size: 15px;
   -moz-transition-property: background color;
   -moz-transition-duration: .3s;
   text-shadow: 1px 1px 0 black;
 }
-.home > header nav li a:hover {
+body > header nav li a:hover {
   color: #6cb251;
   background: rgba(0, 0, 0, 0.5);
   -moz-transition-property: background color;
   -moz-transition-duration: .3s;
 }
+body > header nav li a.logo {
+  font-family: 'Medula One', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 100%;
+  padding: 4px 25px;
+  vertical-align: middle;
+  color: rgba(255, 255, 255, 0.6);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+}
+body > header nav li a.logo:before {
+  content: '';
+  margin-right: 4px;
+  font-family: icomoon;
+  font-size: 24px;
+  font-weight: norml;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  speak: none;
+}
+body > header nav li a.logo:hover {
+  color: rgba(255, 255, 255, 0.6);
+  background: transparent;
+}
 
-
-.home > header nav ul.primary { float: left; }
-.home > header nav ul.secondary {
+body > header nav ul.primary { float: left; }
+body > header nav ul.secondary {
   float: right;
-  font-size: 90%;
+  font-size: 15px;
   margin-right: 20px;
 }
-.home > header nav ul.secondary a {
-  padding: 11px 5px;
+body > header nav ul.secondary a {
+  padding: 10px 5px;
 }
 
 /* .home > header nav ul.secondary li:first-child a::after { */
@@ -119,6 +151,11 @@ h4 {
   font-weight: 600;
   line-height: 75%;
   font-family: 'Open Sans', sans-serif;
+}
+
+section.content {
+  max-width: 1415px;
+  margin: 0 auto;
 }
 
 .mailing_list {
@@ -170,7 +207,20 @@ h4 {
 }
 
 section.about {
-  padding: 10px 5% 0;
+  padding: 10px 0;
+  margin: 0 115px;
+}
+section.about:nth-child(2n+1) {
+  background-color: rgba(108, 178, 81, 0.6);
+  border: 40px solid white;
+  border-image: url('../images/hedge.png') 38 37 40 36 round;
+  border-image-outset: 40px;
+  margin: 75px;
+}
+
+section.about h2 {
+  line-height: 100%;
+  margin: 0;
 }
 
 p.lede {
@@ -186,4 +236,9 @@ footer {
   color: white;
   border-top: 3px solid #444;
 }
-
+footer * {
+  max-width: 1415px;
+  margin: 0 auto;
+  padding: 10px 5%;
+  -moz-box-sizing: border-box;
+}
